@@ -15,10 +15,11 @@ from . import views
 
 urlpatterns = [
     # path('', views.index, name='index'),
-    path('sign', views.sign, name='sign'),
+    path('', views.sign, name='sign'),
     path('create_user', views.create_user, name='create_user'),
     path('create_parent', views.create_parent, name='create_parent'),
     path('regions', views.regionsCreateAPIView.as_view(), name='regions'),
+    
     path('regionsUpd/<int:pk>/', views.regionsUpdAPIView.as_view()),
     path('schools', views.schoolsCreateAPIView.as_view(), name='schools'),
     path('schoolsUpd/<int:pk>/', views.schoolsUpdAPIView.as_view()),
